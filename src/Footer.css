@@ -1,0 +1,19 @@
+
+
+
+
+footer{
+display: grid;
+align-items: center;
+grid-template-columns: repeat(2,1fr)
+;
+
+
+background-color: rgb(2, 240, 204);margin-top: 20px;
+}
+
+
+
+
+
+

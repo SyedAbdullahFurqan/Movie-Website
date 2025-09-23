@@ -1,0 +1,37 @@
+  /**{
+    padding: 0;margin: 0;
+    box-sizing: border-box;
+}
+
+.logo .move{
+    font-size: 20px;
+    cursor: pointer;
+
+list-style: none;
+    text-decoration: none;
+}
+.logo{
+    margin-top: -30px;
+}
+.containers{
+border: 2px solid gray;
+
+
+}
+.data{
+
+    padding: 0px;
+
+display: flex;
+justify-content: space-between;
+}
+nav ul{
+list-style: none;text-decoration: none;
+display: flex;gap: 20px;
+margin-left: -20px;
+} 
+
+ ul li a{color: rgb(135, 48, 48);
+
+text-decoration:inherit;
+}
