@@ -9,10 +9,11 @@ const Search = () => {
 
 const [Data, setData] = useState([]);
     const location = useLocation();
-
+ console.log(location)
   const params = new URLSearchParams(location.search);
+  console.log(params)
   const query = params.get("query");
-
+ console.log(query)
  const searchs= async()=>{
    
       if (!query) return;

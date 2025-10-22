@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { NavLink, useParams } from 'react-router-dom'
 import { get } from './Axios'
 import axios from 'axios'
 import { useSelector } from 'react-redux'
@@ -88,7 +88,7 @@ const singleheld = async () => {
 
 setData(videos.data)
 
-console.log(videos.data)
+      
 console.log(reccomend.data.results)
 setSimliar(similar.data.results)
 setSingle(res.data)
@@ -138,7 +138,7 @@ first_air_date}</p>
 */
   return (
     <>
-    <section>
+    <section id='HOME' >
 
 
       <div className='w-full h-[200px] relative'>
@@ -205,7 +205,7 @@ return(
 
 </section>
 
-
+<NavLink>
 
 <section className='mt-5'>
 
@@ -258,7 +258,7 @@ return(
 </div>
 
 </section>
-
+</NavLink>
 
 
 

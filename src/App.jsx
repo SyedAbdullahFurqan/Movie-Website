@@ -36,9 +36,9 @@ children:[
      element: <> <Movie/>  </> 
       },
 
-        {path:"/",
-
-     element: <> <Head/>  </> 
+         {
+        index: true, // ✅ this makes Head the default when user hits "/"
+        element: <Head />,
       },
    {path:"/home/:imdbID",
 

@@ -72,8 +72,8 @@ const Movie = ({children}) => {
           <h1 className=''>Movie Search</h1>
 
     
-          <input type="text" className='text-amber-50' onChange={(e) => setloot(e.target.value)}  />
-          <button onClick={ enter}>search</button>
+          <input type="text" className='bg-amber-50' onChange={(e) => setloot(e.target.value)}  />
+          <button  className='bg-amber-50' onClick={enter}           >search</button>
   <p>{Errors.show &&  Errors.iserror}</p>
         </div>
         <div className='read md:'>

@@ -9,11 +9,18 @@ const ids=cards.id
 const expolre=cards.media_type
 
   const urls= useSelector(state => state.counter.imga)
-
+  const handleScroll = () => {
+    const section = document.getElementById("HOME");
+    section?.scrollIntoView({ behavior: "smooth" });
+  };
   return (
     <>
       
-<NavLink   to={`/${expolre ||"movie"}/${ids}`}>
+<NavLink    onClick={handleScroll}
+        style={{
+         
+          cursor: "pointer",
+        }} to={`/${expolre ||"movie"}/${ids}  `}>
 <div className='mt-5 '>
 
 <img src={urls+cards.backdrop_path}  alt="img not found" className="h-40 w-full object-cover rounded"/>

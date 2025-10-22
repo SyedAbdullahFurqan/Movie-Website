@@ -8,15 +8,15 @@ import './Navbar.css'
 
 
 const Navbar = () => {
-
+const naviage=useNavigate()
 const [Searchs, setSearchs] = useState(" ");
 
 
-const  navigate=useNavigate()
 useEffect(() => {
-    navigate(`/search?query=${Searchs}`)
+  if (Searchs && Searchs.trim() !== "") {
+    naviage(`/search?query=${Searchs}`);
+  }
 }, [Searchs]);
-
   return (
     < >
     <div className='     bg-transparent relative '>
