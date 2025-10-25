@@ -55,7 +55,7 @@ return{color:isActive ?"red":"white",}
 
 <div>
 
-<input type="text" placeholder='  search' className=' bg-amber-50 my-4'  onChange={(e) => setSearchs(e.target.value)} value={Searchs} />
+<input type="text" placeholder='Search' className=' bg-white my-4'  onChange={(e) => setSearchs(e.target.value)} value={Searchs} />
 
 </div>
 </ul>

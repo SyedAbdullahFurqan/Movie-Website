@@ -25,7 +25,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
 // import required modules
-import { EffectFade, Navigation, Pagination , EffectCoverflow} from 'swiper/modules';
+import { EffectFade, Navigation, Pagination , EffectCoverflow, Autoplay} from 'swiper/modules';
 import { get} from './Axios'
 import { mega, Todolist,pops,player, Ups } from './redux/Counter/Slect'
 import Trend from './Trend'
@@ -119,7 +119,11 @@ upcoming()
         pagination={{
           clickable: true,
         }}
-        modules={[EffectFade, Navigation, Pagination]}
+        modules={[EffectFade, Navigation, Pagination,Autoplay]}
+          autoplay={{
+    delay: 3000,        // 3 seconds per slide
+    disableOnInteraction: false, // keeps autoplay even after manual scroll
+  }}
         className="mySwiper -mt-5 "
       >
         
