@@ -11,11 +11,15 @@ const Single = () => {
 
   return (
     <div>
-      <Navbar/>
+      <div className='hidden sm:block  '>
+      <Navbar  />
+      
+</div>
 
 <Outlet/>
     
-<div className='block md:hidden mt-7 '>
+<div className='block sm:hidden mt-7 '>
+  
 < Mobile />
     </div>
     </div>

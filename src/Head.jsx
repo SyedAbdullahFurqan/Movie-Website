@@ -139,7 +139,7 @@ backdrop_path
 
     <div  className=' slider absolute bottom-0 left-10 w-100 my-13  ml-6'> 
 <h1 className='text-3xl'>{test.title }{test.name} </h1>
-<p  className='para  py-4'> Descriptions : {test.overview}  </p>
+<p  className='para w-50 sm:w-fit py-4'> Descriptions : {test.overview}  </p>
 <span className='px-5 my-5'> Rating:{test.vote_average}</span>
   
 <span>Voting:{test.vote_count}</span> <br />

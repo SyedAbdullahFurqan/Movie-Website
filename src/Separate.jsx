@@ -153,7 +153,7 @@ backdrop_path} className='w-full h-full object-cover ' alt="" />
 
 </div>
 
-<div className='relative mx-23 grid grid-cols-3'>
+<div className='relative mx-15 grid grid-cols-1 sm:grid-cols-2'>
 
   <div className='w-60 h-[400px] m-auto my-3 '>
 
@@ -169,8 +169,8 @@ backdrop_path} className='w-60 h-80 object-cover' alt="" />
 
   </div>
 
-<div className='mt-27 '>
-
+<div className=' sm:mt-25'>
+<div className='mt-3 space-y-2 text-sm sm:text-base'>
  <p className='text-[40px]'>{Single.name || Single.title
 }</p>
 <p className='mt-4'> Realse Date  : {Single.
@@ -178,17 +178,17 @@ release_date}</p>
 
 <p className=''> Rating : {Single.vote_average}</p>
 <p> Views  :  {Single.vote_count}</p>
-<p className=''>Description :  {Single.overview
+<p className='line-clamp-5'>Description :  {Single.overview
 }</p>
 
 
+</div>
 
-
-<div className='grid grid-cols-4'> 
-{Cast.map((crew)=>{
+<div className='grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-'> 
+{Cast.slice(0,7).map((crew)=>{
 return(
 <div className=''>
-<img src={ url+crew.profile_path} className='w-70 h-[30px] rounded m-auto px-3' alt="" />
+<img src={ url+crew.profile_path} className='w-full h-full rounded m-auto px-3' alt="" />
 <p className=''>{crew.name}</p>
 </div>
 )

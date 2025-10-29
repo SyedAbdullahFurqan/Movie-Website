@@ -28,8 +28,8 @@ useEffect(() => {
 return{color:isActive ?"red":"white",}
         } } >Movie</NavLink>
 </div>
-<div className=' hidden md:block'>
-<ul className='flex   flex-col  md:flex-row  mb-7 mr-6 md:items-center'>
+<div className=' '>
+<ul className='flex  items-center flex-col  sm:flex-row  mb-7 mr-6 md:items-center'>
 
     <li className='px-6'>
         <NavLink to={"/home"} style={({isActive})=>{
