@@ -1,19 +1,16 @@
-import React, { useState } from 'react'
-
+import React from 'react'
+import './furqan.css'
 import { NavLink, useParams } from 'react-router-dom'
 
 const Card = ({card}) => {
 console.log(card)
-const [loot, setloot] = useState("");
+
 const {imdbID}=card
 const id =useParams()
 
   return (
     <>
- 
- {/* <input type="text" className='bg-amber-50' onChange={(e) => setloot(e.target.value)}  />
-          <button  className='bg-amber-50' onClick={enter}           >search</button> */}
-<div className="border-2 border-amber-50 rounded-3xl  shadow-md p-4 flex flex-col items-center text-center">
+<div className=" border-amber-50  border-2 rounded-xl shadow-md p-4 flex flex-col items-center text-center">
   <img
     src={card.Poster}
     alt={card.Title}
@@ -24,12 +21,11 @@ const id =useParams()
   <p className="text-gray-500">Year: {card.Year}</p>
 
   <NavLink to={`/home/${card.imdbID}`}>
-    <button className="mt-3 bg-blue-500 text-white px-3 py-1 cursor-pointer rounded-md hover:bg-blue-600 transition">
+    <button className="mt-3 bg-blue-500 cursor-pointer text-white px-3 py-1 rounded-md hover:bg-blue-600 transition">
       Watch Movie
     </button>
   </NavLink>
 </div>
-
     
     </>
   )

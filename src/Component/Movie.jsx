@@ -68,8 +68,7 @@ const Movie = ({children}) => {
 
 
   </Cont.Provider>
- 
-<div className="min-h-screen flex flex-col items-center pt-24 px-4 ">
+      <div className="min-h-screen flex flex-col items-center pt-24 px-4 ">
   {/* Header */}
   <h1 className="text-3xl font-bold mb-6">Movie Search</h1>
 
@@ -78,11 +77,11 @@ const Movie = ({children}) => {
     <input
       type="text"
       placeholder="Search a movie..."
-      className="bg-white border border-gray-300 rounded-md px-3 py-2 w-64 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-400"
+      className=" border border-gray-300 rounded-md px-3 py-2 w-64 shadow-sm focus:outline-none text-white focus:ring-2 focus:ring-blue-400"
       onChange={(e) => setloot(e.target.value)}
     />
     <button
-      className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition"
+      className="bg-blue-500 text-white px-4 py-2 cursor-pointer rounded-md hover:bg-blue-600 transition"
       onClick={enter}
     >
       Search
@@ -103,10 +102,11 @@ const Movie = ({children}) => {
     )}
   </div>
 </div>
+
+     
     </>
     
   )
 }
-
 
 export default Movie
