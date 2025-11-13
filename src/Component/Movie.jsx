@@ -68,27 +68,45 @@ const Movie = ({children}) => {
 
 
   </Cont.Provider>
-        <div className='text-center'>
-          <h1 className=''>Movie Search</h1>
+ 
+<div className="min-h-screen flex flex-col items-center pt-24 px-4 ">
+  {/* Header */}
+  <h1 className="text-3xl font-bold mb-6">Movie Search</h1>
 
-    
-          <input type="text" className='bg-amber-50' onChange={(e) => setloot(e.target.value)}  />
-          <button  className='bg-amber-50' onClick={enter}           >search</button>
-  <p>{Errors.show &&  Errors.iserror}</p>
-        </div>
-        <div className='read md:'>
-          {Load ? <Spinner /> : movies.map((movie) =>{
-          
-  return(
+  {/* Search Section */}
+  <div className="flex flex-col sm:flex-row items-center gap-2 mb-8">
+    <input
+      type="text"
+      placeholder="Search a movie..."
+      className="bg-white border border-gray-300 rounded-md px-3 py-2 w-64 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-400"
+      onChange={(e) => setloot(e.target.value)}
+    />
+    <button
+      className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition"
+      onClick={enter}
+    >
+      Search
+    </button>
+  </div>
 
-            <Card card={movie} />
+  {/* Error Message */}
+  <p className="text-red-500 mb-4">{Errors.show && Errors.iserror}</p>
 
-        )})}</div>
-
-     
+  {/* Movie Grid */}
+  <div className="w-full max-w-6xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    {Load ? (
+      <div className="col-span-3 flex justify-center items-center">
+        <Spinner />
+      </div>
+    ) : (
+      movies.map((movie) => <Card key={movie.imdbID} card={movie} />)
+    )}
+  </div>
+</div>
     </>
     
   )
 }
+
 
 export default Movie

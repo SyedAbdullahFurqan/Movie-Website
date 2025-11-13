@@ -184,7 +184,7 @@ release_date}</p>
 
 </div>
 
-<div className='grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-'> 
+<div className='grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 '> 
 {Cast.slice(0,7).map((crew)=>{
 return(
 <div className=''>

@@ -1,9 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom';
 
-import "./another.css"
-import Movie from './Movie';
-import Card from './Card';
+
 import {Cont} from "../Context/Slice"
 
 const Another = ({params}) => {
@@ -65,31 +63,9 @@ function video(params) {
   return (
     <div>
 <section >
-  <div className='back'>
 
-
-  <div className='tit'>
-<h1>Titanic</h1>
-
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus, quae.</p>
-<p> Rating : {move.
-imdbRating
-}</p>
- <span>{move.imdbVotes
-} Votes </span>
- <p>{move.
-Runtime
-}</p>
- <button>{move.
-Genre}</button>
- </div>
-
-
-
-
-</div>
- <div className='contents' >
-  <img src={move.Poster} alt=""  style={{width:"200px"}}/>
+ <div className='h-screen flex flex-col items-center pt-24  w-100 m-auto border-2 border-amber-50 rounded-3xl text-center' >
+  <img src={move.Poster} alt="" className='w-fit '/>
 <h1>{move.Title}</h1>
         
         <h4> Type: {move.Type}</h4>
@@ -108,7 +84,7 @@ Genre}</button>
 
           <div>
 
-<button onClick={go} className='text-amber-50'>GO BACK</button>
+<button onClick={go} className='text-amber-50 cursor-pointer'>GO BACK</button>
 
             <h1>Simliar Movie</h1>
 
@@ -120,10 +96,10 @@ return(
   
   <>
   
-  <div className='containerss ' >
+  <div className=' border-2 border-amber-50 rounded-3xl mx-3 ' >
    
-<img src={sim.Poster} className='inline-block' alt=""  />
- <div className='contentss' >
+<img src={sim.Poster} className='w-fit  m-auto' alt=""  />
+ <div className=' text-center' >
 
         <h1> Name: {sim.Title}</h1>
         <h4> Type: {sim.Type}</h4>
