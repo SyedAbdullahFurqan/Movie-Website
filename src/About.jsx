@@ -19,9 +19,9 @@ const {data,hasNextPage,fetchNextPage}=useInfiniteQuery(
 
 
   getNextPageParam:(lastPage,allPages)=>{
- console.log(allPages.length)
+ console.log(allPages[0].results)
 
-return lastPage.results.length ==19 ?allPages.length + 1: undefined;
+return lastPage.results.length === 19 || 20 ? allPages.length + 1: undefined;
  
 }
   }  
@@ -30,7 +30,7 @@ return lastPage.results.length ==19 ?allPages.length + 1: undefined;
 
 )
 
-
+ console.log()
    /*  if (lastPage.page < lastPage.total_pages) {
     return allPages + 1;
   }

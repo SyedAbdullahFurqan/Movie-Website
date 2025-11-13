@@ -20,15 +20,15 @@ useEffect(() => {
   return (
     < >
     <div className='     bg-transparent relative '>
-<nav className='  flex  items-center justify-between  '>
+<nav className=' fixed  top-0 left-0 z-50 bg-neutral-900  w-full flex  items-center justify-between  '>
 
-<div className='logo text-2xl ml-3 '>
-<NavLink to={"/"} className={"move"} style={({isActive})=>{
+
+<NavLink to={"/"} className={"mb-6 text-3xl ml-4"} style={({isActive})=>{
 
 return{color:isActive ?"red":"white",}
         } } >Movie</NavLink>
-</div>
-<div className=' '>
+
+
 <ul className='flex  items-center flex-col  sm:flex-row  mb-7 mr-6 md:items-center'>
 
     <li className='px-6'>
@@ -63,7 +63,7 @@ return{color:isActive ?"red":"white",}
 
 
 
-</div>
+
 </nav>
 
 
